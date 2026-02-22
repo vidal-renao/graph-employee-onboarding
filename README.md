@@ -19,3 +19,5 @@ In real companies, identity automation is validated and reviewed before touching
 This repository follows that approach by default.
 
 ## Repository structure
+
+- Architecture: `docs/architecture.md`
