@@ -5,7 +5,21 @@ on:
   pull_request:
 
 jobs:
-  validate:
+  onboarding-dryrun:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run onboarding script (Dry-Run)
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File ./src/Onboard-Employees.ps1 `
+            -CsvPath ./data/employees.sample.csv `
+            -OutDir ./out
+
+      - name: Upload output artifacts (logs + report)
+        uses: actions/upload-artifact@v4
+        with:
+          name: onboarding-output
+          path: out/
