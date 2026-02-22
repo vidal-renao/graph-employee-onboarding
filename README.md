@@ -1,34 +1,21 @@
 # Graph Employee Onboarding (Dry-Run)
 
-Enterprise-style automation project for employee onboarding using Microsoft Graph.
+Enterprise-style employee onboarding automation using Microsoft Graph (simulated).  
+This project is designed like a corporate IT automation repo: structured scripts, dry-run safety, logging, reporting, and CI pipelines.
 
-## Purpose
-This repository demonstrates how employee onboarding can be automated in a
-corporate IT environment following best practices:
-- GitHub as single source of truth
-- Structured PowerShell scripts
-- Dry-run execution before production
-- CI with GitHub Actions
-
-## What this project does
-- Reads employee data from CSV files
+## What it does
+- Reads employee data from a CSV file
 - Validates required attributes
-- Simulates:
+- Simulates onboarding actions (dry-run):
   - User creation
-  - Group membership assignment
+  - Group assignment
   - License assignment
-- Generates execution logs and reports
+- Produces per-run outputs:
+  - Log file (`out/onboarding-YYYYMMDD-HHMMSS.log`)
+  - CSV report (`out/onboarding-report-YYYYMMDD-HHMMSS.csv`)
 
 ## Why dry-run
-In real companies, identity automation is validated and reviewed before touching
-production systems.  
-This project follows the same approach by default.
+In real companies, identity automation is validated and reviewed before touching production systems.  
+This repository follows that approach by default.
 
-## Technology stack
-- PowerShell 7
-- GitHub
-- GitHub Actions
-- Microsoft Graph (simulated)
-
-## Project status
-Work in progress – onboarding logic and CI pipeline will be added incrementally.
+## Repository structure
