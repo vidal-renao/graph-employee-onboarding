@@ -1,0 +1,3 @@
+firstName,lastName,department,jobTitle,usageLocation,groups,licenseSku
+Laura,Gomez,IT,Service Desk Lead,CH,"IT-Users;VPN-Users",M365_E3
+Marco,Rossi,Finance,Accountant,CH,"FIN-Users",M365_F3
