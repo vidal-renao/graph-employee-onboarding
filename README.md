@@ -21,3 +21,13 @@ This repository follows that approach by default.
 ## Repository structure
 
 - Architecture: `docs/architecture.md`
+
+## Offboarding workflow
+- Reads users from CSV (`data/offboarding.sample.csv`)
+- Simulates:
+  - Account disable
+  - Session revocation
+  - Group removal (optional)
+  - License removal (optional)
+- Generates logs and a CSV report per run
+- Script: `src/Offboard-Employees.ps1`
