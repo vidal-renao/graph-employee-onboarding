@@ -41,4 +41,3 @@ function Remove-GraphUserFromGroups {
     throw "Live mode group removal not implemented yet."
 }
 
-Export-ModuleMember -Function Add-GraphUserToGroups,Remove-GraphUserFromGroups

@@ -26,4 +26,3 @@ function Connect-GraphContext {
     throw "Live mode Graph authentication not implemented yet."
 }
 
-Export-ModuleMember -Function Connect-GraphContext

@@ -41,4 +41,3 @@ function Remove-GraphUserLicenses {
     throw "Live mode license removal not implemented yet."
 }
 
-Export-ModuleMember -Function Set-GraphUserLicense,Remove-GraphUserLicenses

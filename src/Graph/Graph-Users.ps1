@@ -57,4 +57,3 @@ function Revoke-GraphUserSessions {
     throw "Live mode session revoke not implemented yet."
 }
 
-Export-ModuleMember -Function New-GraphUser,Disable-GraphUser,Revoke-GraphUserSessions
