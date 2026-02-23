@@ -1,0 +1,12 @@
+.# Visual Studio
+.vs/
+*.user
+*.suo
+
+# PowerShell output
+out/*.log
+out/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
