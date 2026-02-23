@@ -23,3 +23,12 @@ jobs:
         with:
           name: onboarding-output
           path: out/
+
+
+      - name: Run offboarding script (Dry-Run)
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File ./src/Offboard-Employees.ps1 `
+            -CsvPath ./data/offboarding.sample.csv `
+            -OutDir ./out `
+            -Mode DryRun
