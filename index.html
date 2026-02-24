@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise-grade employee lifecycle automation using Microsoft Graph API">
+    <title>Graph Employee Onboarding - Enterprise Automation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⚙️</span>
+                <span class="brand-name">Graph Employee Onboarding</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#documentation">Documentation</a>
+                <a href="https://github.com/vidal-renao/graph-employee-onboarding" target="_blank" class="github-link">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Enterprise Employee Lifecycle Automation</h1>
+                <p class="hero-subtitle">Production-ready PowerShell automation for Microsoft 365 employee onboarding and offboarding using Microsoft Graph API</p>
+                <div class="hero-badges">
+                    <span class="badge">PowerShell</span>
+                    <span class="badge">Microsoft Graph API</span>
+                    <span class="badge">CI/CD Ready</span>
+                    <span class="badge">Dry-Run Safe</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="https://github.com/vidal-renao/graph-employee-onboarding" class="btn btn-primary" target="_blank">
+                        View Source Code
+                    </a>
+                    <a href="#documentation" class="btn btn-secondary">
+                        Read Documentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Automated Onboarding</h3>
+                    <p>Bulk user creation from CSV with validation, group assignment, and license provisioning</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Automated Offboarding</h3>
+                    <p>Account deactivation, session revocation, group/license removal with audit trail</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Dry-Run Mode</h3>
+                    <p>Simulate all operations before execution - production-safe by default</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Comprehensive Logging</h3>
+                    <p>Detailed logs with timestamps, severity levels, and execution context</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>CSV Reporting</h3>
+                    <p>Per-run reports with status, errors, and execution metrics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>CI/CD Integration</h3>
+                    <p>GitHub Actions workflows for automated testing and deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2 class="section-title">System Architecture</h2>
+            <div class="architecture-content">
+                <div class="architecture-diagram">
+                    <div class="arch-box csv-box">
+                        <strong>📄 CSV Input</strong>
+                        <p>Employee data file</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-box script-box">
+                        <strong>⚙️ PowerShell Script</strong>
+                        <p>Onboard-Employees.ps1</p>
+                        <ul>
+                            <li>Data validation</li>
+                            <li>Dry-run check</li>
+                            <li>Error handling</li>
+                        </ul>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-box graph-box">
+                        <strong>☁️ Microsoft Graph API</strong>
+                        <p>User creation</p>
+                        <p>Group assignment</p>
+                        <p>License provisioning</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-box output-box">
+                        <strong>📊 Outputs</strong>
+                        <p>Log file (timestamped)</p>
+                        <p>CSV report</p>
+                    </div>
+                </div>
+
+                <div class="architecture-features">
+                    <h3>Modular Design</h3>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <span class="module-name">Graph-Auth.ps1</span>
+                            <span class="module-desc">Authentication & token management</span>
+                        </div>
+                        <div class="module-item">
+                            <span class="module-name">Graph-Users.ps1</span>
+                            <span class="module-desc">User creation & management</span>
+                        </div>
+                        <div class="module-item">
+                            <span class="module-name">Graph-Groups.ps1</span>
+                            <span class="module-desc">Group membership operations</span>
+                        </div>
+                        <div class="module-item">
+                            <span class="module-name">Graph-Licenses.ps1</span>
+                            <span class="module-desc">License assignment logic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <div class="container">
+            <h2 class="section-title">Enterprise Use Cases</h2>
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <h3>🏢 Bulk Employee Onboarding</h3>
+                    <p>Provision 50+ new hires in minutes with consistent configuration, group assignments, and license allocation.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>🔄 Departmental Transfers</h3>
+                    <p>Automatically update group memberships, licenses, and permissions when employees change departments.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>📉 Offboarding Automation</h3>
+                    <p>Secure and compliant account deactivation with session revocation and resource cleanup.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>🔍 Audit & Compliance</h3>
+                    <p>Complete audit trails with timestamped logs and CSV reports for compliance requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Output Examples Section -->
+    <section class="outputs">
+        <div class="container">
+            <h2 class="section-title">Output Examples</h2>
+            <div class="output-examples">
+                <div class="output-example">
+                    <h3>📝 Log File Output</h3>
+                    <pre class="code-block"><code>[2026-02-20 10:15:32] [INFO] Starting employee onboarding process
+[2026-02-20 10:15:32] [INFO] DRY-RUN mode enabled - no changes will be made
+[2026-02-20 10:15:33] [INFO] Reading CSV file: data/employees.csv
+[2026-02-20 10:15:33] [INFO] Found 15 employees to process
+[2026-02-20 10:15:34] [INFO] Validating employee data...
+[2026-02-20 10:15:35] [DRY-RUN] Would create user: john.doe@company.com
+[2026-02-20 10:15:35] [DRY-RUN] Would assign to group: Sales-Team
+[2026-02-20 10:15:35] [DRY-RUN] Would assign license: Microsoft 365 E3
+[2026-02-20 10:15:36] [SUCCESS] Employee john.doe@company.com processed
+[2026-02-20 10:15:40] [INFO] Processing complete: 15 successful, 0 failed
+[2026-02-20 10:15:40] [INFO] Report saved: out/onboarding-report-20260220-101540.csv</code></pre>
+                </div>
+
+                <div class="output-example">
+                    <h3>📊 CSV Report Structure</h3>
+                    <div class="table-wrapper">
+                        <table class="report-table">
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Groups</th>
+                                    <th>Licenses</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>john.doe@company.com</td>
+                                    <td><span class="status-success">✓ Success</span></td>
+                                    <td>Sales-Team, All-Employees</td>
+                                    <td>Microsoft 365 E3</td>
+                                    <td>2026-02-20 10:15:36</td>
+                                </tr>
+                                <tr>
+                                    <td>jane.smith@company.com</td>
+                                    <td><span class="status-success">✓ Success</span></td>
+                                    <td>Engineering, All-Employees</td>
+                                    <td>Microsoft 365 E5</td>
+                                    <td>2026-02-20 10:15:38</td>
+                                </tr>
+                                <tr>
+                                    <td>bob.jones@company.com</td>
+                                    <td><span class="status-warning">⚠ Skipped</span></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>2026-02-20 10:15:39</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Quick Start Documentation</h2>
+            <div class="doc-grid">
+                <div class="doc-section">
+                    <h3>📋 Prerequisites</h3>
+                    <ul>
+                        <li>PowerShell 7+ installed</li>
+                        <li>Microsoft Graph PowerShell SDK</li>
+                        <li>Azure AD app registration with appropriate permissions</li>
+                        <li>CSV file with employee data</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section">
+                    <h3>🚀 Installation</h3>
+                    <pre class="code-block"><code># Clone the repository
+git clone https://github.com/vidal-renao/graph-employee-onboarding.git
+
+# Navigate to project
+cd graph-employee-onboarding
+
+# Install dependencies
+Install-Module Microsoft.Graph -Scope CurrentUser</code></pre>
+                </div>
+
+                <div class="doc-section">
+                    <h3>⚙️ Configuration</h3>
+                    <ol>
+                        <li>Create Azure AD app registration</li>
+                        <li>Grant required Graph API permissions</li>
+                        <li>Update authentication parameters in scripts</li>
+                        <li>Prepare CSV file with employee data</li>
+                    </ol>
+                </div>
+
+                <div class="doc-section">
+                    <h3>▶️ Usage</h3>
+                    <pre class="code-block"><code># Dry-run (recommended first)
+.\src\Onboard-Employees.ps1 -CsvPath "data/employees.csv" -DryRun
+
+# Production execution
+.\src\Onboard-Employees.ps1 -CsvPath "data/employees.csv"
+
+# Offboarding
+.\src\Offboard-Employees.ps1 -CsvPath "data/offboarding.csv" -DryRun</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-permissions">
+                <h3>🔐 Required Graph API Permissions</h3>
+                <div class="permissions-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Permission</th>
+                                <th>Type</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>User.ReadWrite.All</td>
+                                <td>Application</td>
+                                <td>Create and manage user accounts</td>
+                            </tr>
+                            <tr>
+                                <td>Group.ReadWrite.All</td>
+                                <td>Application</td>
+                                <td>Manage group memberships</td>
+                            </tr>
+                            <tr>
+                                <td>Organization.Read.All</td>
+                                <td>Application</td>
+                                <td>Read license information</td>
+                            </tr>
+                            <tr>
+                                <td>Directory.ReadWrite.All</td>
+                                <td>Application</td>
+                                <td>Full directory operations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Graph Employee Onboarding</h4>
+                    <p>Enterprise-grade Microsoft 365 automation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/vidal-renao/graph-employee-onboarding" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://github.com/vidal-renao/graph-employee-onboarding/blob/main/docs/architecture.md" target="_blank">Architecture Docs</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/graph/" target="_blank">Microsoft Graph API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Author</h4>
+                    <p>Vidal Reñao</p>
+                    <p><a href="https://github.com/vidal-renao" target="_blank">@vidal-renao</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vidal Reñao. Open source project for educational and enterprise use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
