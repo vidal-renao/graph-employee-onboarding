@@ -1,33 +1,40 @@
-# Graph Employee Onboarding (Dry-Run)
+# Graph Employee Onboarding
 
-Enterprise-style employee onboarding automation using Microsoft Graph (simulated).  
-This project is designed like a corporate IT automation repo: structured scripts, dry-run safety, logging, reporting, and CI pipelines.
+PowerShell lab for validating employee lifecycle workflows before connecting them to Microsoft Graph.
 
-## What it does
-- Reads employee data from a CSV file
-- Validates required attributes
-- Simulates onboarding actions (dry-run):
-  - User creation
-  - Group assignment
-  - License assignment
-- Produces per-run outputs:
-  - Log file (`out/onboarding-YYYYMMDD-HHMMSS.log`)
-  - CSV report (`out/onboarding-report-YYYYMMDD-HHMMSS.csv`)
+**Status: dry-run simulation. Live Graph provisioning is not implemented.**
 
-## Why dry-run
-In real companies, identity automation is validated and reviewed before touching production systems.  
-This repository follows that approach by default.
+## What you can review
 
-## Repository structure
+- Employee data read from CSV and required-attribute validation.
+- Simulated user creation, group membership and license assignment.
+- Timestamped logs and per-run CSV reports in `out/`.
+- A separate offboarding simulation for account disable, session revocation and optional group/license removal.
 
-- Architecture: `docs/architecture.md`
+## Run the onboarding simulation
 
-## Offboarding workflow
-- Reads users from CSV (`data/offboarding.sample.csv`)
-- Simulates:
-  - Account disable
-  - Session revocation
-  - Group removal (optional)
-  - License removal (optional)
-- Generates logs and a CSV report per run
-- Script: `src/Offboard-Employees.ps1`
+From the repository root, with PowerShell 7 installed:
+
+```powershell
+pwsh -File ./src/Onboard-Employees.ps1 -CsvPath ./data/employees.sample.csv -Mode DryRun
+```
+
+Inspect the generated log and report in `out/`. Use the sample CSV to understand the expected input format.
+
+The `Live` mode is a placeholder that exits without provisioning. The Graph helper modules are scaffolding; this repository does not create Microsoft 365 accounts or assign real licenses.
+
+## Repository guide
+
+| Path | Purpose |
+|---|---|
+| `src/Onboard-Employees.ps1` | Onboarding entry point |
+| `src/Offboard-Employees.ps1` | Offboarding simulation |
+| `data/employees.sample.csv` | Onboarding sample data |
+| `data/offboarding.sample.csv` | Offboarding sample data |
+| [Architecture](docs/architecture.md) | Design notes |
+
+## Skills demonstrated
+
+PowerShell scripting, input validation, identity lifecycle modeling, structured logging and operational reporting.
+
+[Portfolio](https://vidal-pro-portfolio.vercel.app/en) · [LinkedIn](https://www.linkedin.com/in/vidalrenao/)
